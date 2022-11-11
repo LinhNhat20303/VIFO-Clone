@@ -1,0 +1,174 @@
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: 'Roboto', sans-serif;
+}
+.onboard {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  position: relative;
+  .main {
+    position: absolute;
+    width: 300px;
+    height: 72%;
+    left: 39px;
+    top: 100px;
+    .visual {
+      position: absolute;
+      width: 282.13px;
+      height: 260px;
+      .frame {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-left: 14px;
+        gap: 4px;
+
+      
+        .textTitle {
+          width: 232px;
+          height: 26px;
+
+          /* UI Heading / normal */
+
+          font-family: "Roboto";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 26px;
+          /* identical to box height, or 130% */
+
+          text-align: center;
+
+          /* LM / Text / NL 300 */
+
+          color: #001a33;
+
+          /* Inside auto layout */
+
+          flex: none;
+          order: 0;
+          flex-grow: 0;
+        }
+        .textInfor {
+          width: 300px;
+          height: 36px;
+
+          /* UI Text / small */
+
+          font-family: "Roboto";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 18px;
+          /* or 129% */
+
+          text-align: center;
+
+          /* LM / Text / NL 500 */
+
+          color: #99a3ad;
+
+          /* Inside auto layout */
+
+          flex: none;
+          order: 1;
+          flex-grow: 0;
+        }
+      }
+    }
+  }
+}
+.swiper-button-prev {
+  display: none;
+}
+.swiper-button-next:after {
+  font-size: 16px;
+  position: absolute;
+  top: 252px;
+  color: #f5832f;
+}
+.swiper-pagination {
+    position: absolute;
+    .swiper-pagination-bullet{
+      width: 6px;
+      height: 6px;
+
+    }
+  .swiper-pagination-bullet-active {
+    background-color: #f5832f;
+    width: 10px;
+height: 10px;
+
+
+  }
+}
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+  bottom: 10px;
+  left: -130px;
+  width: 100%;
+}
+.Privacy{
+  width: 99px;
+  height: 99px;
+}
+.textPrivacy{
+
+width: 99px;
+height: 32px;
+
+/* UI Text / xsmall */
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 16px;
+/* or 133% */
+
+display: flex;
+justify-content: flex-start;
+text-align: left;
+margin-top: 4px;
+
+/* LM / Text / NL 400 */
+
+color: #33485C;
+}
+.grid-item.grid-item{
+padding: 8px !important;
+}
+.itemTitle{
+  /* Bảo hiểm xe cộ */
+
+
+width: 329px;
+
+height: 20px;
+
+/* UI Text / normal-M */
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 15px;
+line-height: 20px;
+/* identical to box height, or 133% */
+
+display: flex;
+align-items: flex-end;
+letter-spacing: -0.25px;
+
+/* LM / Text / NL 300 */
+
+color: #001A33;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
