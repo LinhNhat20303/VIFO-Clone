@@ -1,5 +1,5 @@
 import React, { useEffect,  } from "react";
-import { Grid, GridItem,Icon, useStore, Page, Tabbar, Link,Button} from "zmp-framework/react";
+import { Grid, GridItem,Icon, useStore, Page, Tabbar, Link,Button, zmp} from "zmp-framework/react";
 import slider from "../static/Image/Home/MaskGroup.png";
 import icon from "../static/Image/Home/item.png"
 
@@ -28,7 +28,7 @@ export default function Home() {
           <Grid noBorder>
             {privacy.map((content,index)=>{
               return(
-                 <GridItem key={`content${index}`} >
+                 <GridItem key={`content${index}`}  onClick={()=>zmp.view.main.router.navigate("/insurance-page/carInsurance")}>
               <img className="Privacy" src={icon} alt="" />
               <span className="textPrivacy">{content.label}</span>
             </GridItem>
@@ -99,7 +99,7 @@ export default function Home() {
           >
             Xem Thêm 
           </Button>
-       </div> 
+       </div>
        </div>
       
        <Tabbar className="tabbar" bottom >
