@@ -172,3 +172,51 @@ flex: none;
 order: 0;
 flex-grow: 0;
 }
+.tabbar{
+  width: 100%;
+  height:73px;
+  display: flex;
+}
+.linkTabbar{
+  display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 12px 0px 8px;
+gap: 4px;
+
+width: 120px;
+height: 49px;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+.tab-link-active{
+color: #F5832F;
+}
+.navBarText{
+  font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 13px;
+line-height: 12px;
+/* identical to box height */
+
+text-align: center;
+letter-spacing: -0.24px;
+
+/* LM/Background/LG600 */
+
+// color: #C9D1D8;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+}}

@@ -55,25 +55,6 @@ const store = createStore({
       
       
     ],
-    healthCareContent:[
-      {
-        id:1,
-        label:"BH Bắt buộc TNDS xe ô tô"
-      },
-      {
-        id:2,
-        label:"BH bắt buộc xe mô tô - gắn máy"
-      },
-      {
-        id:3,
-        label:"Bảo hiểm hỗ trợ dịch bệnh"
-      },
-      {
-        id:4,
-        label:"Bảo hiểm vật chất xe ô tô"
-      },
-      
-    ]
   },
   getters: {
     user({ state }) {
