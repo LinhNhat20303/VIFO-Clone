@@ -1,5 +1,5 @@
 import React, { useEffect,  } from "react";
-import { Grid, GridItem,Icon, useStore, Page, Tabbar, Link, } from "zmp-framework/react";
+import { Grid, GridItem,Icon, useStore, Page, Tabbar, Link,Button} from "zmp-framework/react";
 import slider from "../static/Image/Home/MaskGroup.png";
 import icon from "../static/Image/Home/item.png"
 
@@ -18,7 +18,7 @@ export default function Home() {
   },[])
   return (
     <Page>
-    <div className="bg-white ">
+    <div className="bg-white pb-[55px] ">
       <div className="slider">
         <img className="w-full" src={slider} alt="" />
       </div>
@@ -70,19 +70,19 @@ export default function Home() {
    
       </div>
       <div className="pl-[16px]">
-      <h1 className="itemTitle  py-[16px]  ">Tin tức</h1>
+      <h1 className="itemTitle  my-[16px]  ">Tin tức</h1>
       {newsData.map((item,index)=>{
         return(
           <div key={`item${index}`} className="flex frameNews">
-       <div >
-       <img className="newsImg" src={item.img} alt="" />
+       <div  className="newsImg">
+       <img src={item.img} alt="" />
    
        </div>
-        <div className="ml-[16px] newsText">
-          <p className="my-0 ">
+        <div className=" newsText">
+          <p className="my-0 newsTextTitle ">
           {item.title}
           </p>
-          <span>
+          <span className="newsTextSpan">
           20/12/2021
           </span>
         </div>
@@ -91,8 +91,18 @@ export default function Home() {
       })}
       
       </div>
+       <div className="button absolute">
+       <Button
+           className=" "
+            typeName='destructive'
+           
+          >
+            Xem Thêm 
+          </Button>
+       </div> 
        </div>
-       {/* <Tabbar className="tabbar" bottom >
+      
+       <Tabbar className="tabbar" bottom >
        <Link className="linkTabbar" tabLink="#tab-1" tabLinkActive>
          
           <i className="fa-solid fa-house text-[#F5832F]"></i>
@@ -106,7 +116,7 @@ export default function Home() {
         <i className="fa-solid fa-circle-user"></i>
           <span className="navBarText"> Trang Chủ </span>
         </Link>
-       </Tabbar> */}
+       </Tabbar>
     </Page>
   );
 }

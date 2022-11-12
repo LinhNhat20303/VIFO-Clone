@@ -96,7 +96,7 @@ const store = createStore({
       {
         id:6,
         img:news6,
-        title:"Dự đoán thị trường bảo hiểm nhân thọ châu Á – Thái Bình Duong",
+        title:"Dự đoán thị trường bảo hiểm nhân thọ châu Á – Thái Bình..",
         date:"20/12/2021"
       }
     ]

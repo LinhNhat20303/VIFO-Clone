@@ -226,9 +226,39 @@ flex-direction: row;
 align-items: flex-start;
 padding: 0px;
 gap: 16px;
+margin-bottom: 16px;
 
 width: 328px;
 height: 64px;
+.newsImg{
+  padding-left: 16px;
+  position: absolute;
+
+left: 0px;
+}
+.newsText{
+  position: absolute;
+  width: 200px;
+height: 60px;
+right:16px;
+.newsTextTitle{
+ 
+font-weight: 500;
+font-size: 14px;
+line-height: 18px;
 
 
+color: #001A33;
+}
+.newsTextSpan{
+font-size: 12px;
+line-height: 16px;
+}
+}
+
+}
+.zmp-btn-destructive {
+  background-color: transparent!important;
+  margin-left: 119px;
+  font-weight: 400;
 }
