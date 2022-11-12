@@ -1,5 +1,12 @@
 
 import { createStore } from 'zmp-core/lite';
+import news1 from './static/Image/Home/image4.png';
+import news2 from './static/Image/Home/image 5-1.png';
+import news3 from './static/Image/Home/image 5-2.png';
+import news4 from './static/Image/Home/image 5-3.png';
+import news5 from './static/Image/Home/image 5-4.png';
+import news6 from './static/Image/Home/image 5.png';
+
 const store = createStore({
   state: {
     user: {
@@ -55,6 +62,44 @@ const store = createStore({
       
       
     ],
+    homePageNew:[
+      {
+        id:1,
+        img:news1,
+        title:"Nên lựa chọn bảo hiểm nhân thọ có kỳ hạn hay trọn đời?",
+        date:"20/12/2021"
+      },
+      {
+        id:2,
+        img: news2,
+        title:"Lợi ích của bảo hiểm sức khỏe nhóm",
+        date:"20/12/2021"
+      },
+      {
+        id:3,
+        img:news3,
+        title:"Vietcombank phân phối bảo hiểm FWD",
+        date:"20/12/2021"
+      },
+      {
+        id:4,
+        img:news4,
+        title:"Nên lựa chọn bảo hiểm nhân thọ có kỳ hạn hay trọn đời?",
+        date:"20/12/2021"
+      },
+      {
+        id:5,
+        img:news5,
+        title:"Nên lựa chọn bảo hiểm nhân thọ có kỳ hạn hay trọn đời?",
+        date:"20/12/2021"
+      },
+      {
+        id:6,
+        img:news6,
+        title:"Dự đoán thị trường bảo hiểm nhân thọ châu Á – Thái Bình Duong",
+        date:"20/12/2021"
+      }
+    ]
   },
   getters: {
     user({ state }) {
@@ -68,6 +113,9 @@ const store = createStore({
     },
     getHealthCareContent({state}){
       return state.healthCareContent;
+    },
+    getHomePageNew({state}){
+      return state.homePageNew;
     }
   },
   actions: {

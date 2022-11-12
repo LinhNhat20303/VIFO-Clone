@@ -220,3 +220,15 @@ order: 1;
 align-self: stretch;
 flex-grow: 0;
 }}
+.frameNews{
+  display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+gap: 16px;
+
+width: 328px;
+height: 64px;
+
+
+}

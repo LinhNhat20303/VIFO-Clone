@@ -6,14 +6,16 @@ import icon from "../static/Image/Home/item.png"
 
 export default function Home() {
   const privacy = useStore("getPrivacyContent");
+  
+  const newsData = useStore("getHomePageNew");
  // const health = privacy.filter((icon) => [0,1,2,3].include(icon.id) == privacy[0].id);
  
-  // useEffect(()=>{
-  //   console.log(privacy[0]);
+  useEffect(()=>{
+    console.log(newsData);
     
-  //   console.log(health);
     
-  // },[])
+    
+  },[])
   return (
     <Page>
     <div className="bg-white ">
@@ -69,19 +71,25 @@ export default function Home() {
       </div>
       <div className="pl-[16px]">
       <h1 className="itemTitle  py-[16px]  ">Tin tức</h1>
-      <div className="flex">
-       <div>
-       <img src={slider} alt="" />
+      {newsData.map((item,index)=>{
+        return(
+          <div key={`item${index}`} className="flex frameNews">
+       <div >
+       <img className="newsImg" src={item.img} alt="" />
+   
        </div>
-        <div className="ml-[16px]">
+        <div className="ml-[16px] newsText">
           <p className="my-0 ">
-          Nên lựa chọn bảo hiểm nhân thọ có kỳ hạn hay trọn đời?
+          {item.title}
           </p>
           <span>
           20/12/2021
           </span>
         </div>
       </div>
+        )
+      })}
+      
       </div>
        </div>
        {/* <Tabbar className="tabbar" bottom >
