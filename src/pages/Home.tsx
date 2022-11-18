@@ -1,5 +1,5 @@
 import React, { useEffect,  } from "react";
-import { Grid, GridItem,Icon, useStore, Page, Tabbar, Link,Button, zmp} from "zmp-framework/react";
+import { Grid, GridItem,Icon, useStore, Page, Tabbar, Link,Button,zmp} from "zmp-framework/react";
 import slider from "../static/Image/Home/MaskGroup.png";
 import icon from "../static/Image/Home/item.png"
 
@@ -28,7 +28,7 @@ export default function Home() {
           <Grid noBorder>
             {privacy.map((content,index)=>{
               return(
-                 <GridItem key={`content${index}`}  onClick={()=>zmp.view.main.router.navigate("/insurance-page/carInsurance")}>
+                 <GridItem key={`content${index}`} onClick={()=> zmp.views.main.router.navigate("/insurance-page/carInsurance")} >
               <img className="Privacy" src={icon} alt="" />
               <span className="textPrivacy">{content.label}</span>
             </GridItem>
@@ -69,7 +69,7 @@ export default function Home() {
           </Grid>
    
       </div>
-      {/* <div className="pl-[16px]">
+      <div className="pl-[16px]">
       <h1 className="itemTitle  my-[16px]  ">Tin tức</h1>
       {newsData.map((item,index)=>{
         return(
@@ -90,8 +90,8 @@ export default function Home() {
         )
       })}
       
-      </div> */}
-       {/* <div className="button absolute">
+      </div>
+       <div className="button absolute">
        <Button
            className=" "
             typeName='destructive'
@@ -99,11 +99,7 @@ export default function Home() {
           >
             Xem Thêm 
           </Button>
-<<<<<<< HEAD
-       </div>  */}
-=======
-       </div>
->>>>>>> a7c9d4bbfd7b17587176121b7c82fc0a8c482c8b
+       </div> 
        </div>
       
        <Tabbar className="tabbar" bottom >
