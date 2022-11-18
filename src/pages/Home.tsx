@@ -69,7 +69,7 @@ export default function Home() {
           </Grid>
    
       </div>
-      <div className="pl-[16px]">
+      {/* <div className="pl-[16px]">
       <h1 className="itemTitle  my-[16px]  ">Tin tức</h1>
       {newsData.map((item,index)=>{
         return(
@@ -90,8 +90,8 @@ export default function Home() {
         )
       })}
       
-      </div>
-       <div className="button absolute">
+      </div> */}
+       {/* <div className="button absolute">
        <Button
            className=" "
             typeName='destructive'
@@ -99,7 +99,7 @@ export default function Home() {
           >
             Xem Thêm 
           </Button>
-       </div> 
+       </div>  */}
        </div>
       
        <Tabbar className="tabbar" bottom >
