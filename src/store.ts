@@ -6,6 +6,8 @@ import news3 from './static/Image/Home/image 5-2.png';
 import news4 from './static/Image/Home/image 5-3.png';
 import news5 from './static/Image/Home/image 5-4.png';
 import news6 from './static/Image/Home/image 5.png';
+import PVI from "./static/Image/car-insurance/PVI.png";
+import BaoMinh from "./static/Image/car-insurance/BaoMinh.png"
 
 const store = createStore({
   state: {
@@ -99,6 +101,43 @@ const store = createStore({
         title:"Dự đoán thị trường bảo hiểm nhân thọ châu Á – Thái Bình..",
         date:"20/12/2021"
       }
+    ],
+    dataCarInsurance: [
+      {
+        id:1,
+        img:BaoMinh,
+        title:"Bảo hiểm TNDS xe không kinh doanh - 4 chỗ",
+        subTitle:"Xe không kinh doanh",
+        price:480700,
+      },{
+        id:2,
+        img:PVI,
+        title:"Bảo hiểm TNDS Xe Pickup 3 chỗ Không KDBán tải",
+        subTitle:"Xe không kinh doanh",
+        price:480700,
+      },
+      {
+        id:3,
+        img:BaoMinh,
+        title:"Bảo hiểm TNDS Xe Pickup 3 chỗ Không KDBán tải",
+        subTitle:"Xe không kinh doanh",
+        price:480700,
+      },
+      {
+        id:4,
+        img:BaoMinh,
+        title:"Bảo hiểm TNDS Xe Pickup 3 chỗ Không KDBán tải",
+        subTitle:"Xe không kinh doanh",
+        price:480700,
+      },
+      ,
+      {
+        id:5,
+        img:BaoMinh,
+        title:"Bảo hiểm TNDS Xe Pickup 3 chỗ Không KDBán tải",
+        subTitle:"Xe không kinh doanh",
+        price:480700,
+      }
     ]
   },
   getters: {
@@ -116,6 +155,9 @@ const store = createStore({
     },
     getHomePageNew({state}){
       return state.homePageNew;
+    },
+    getDataCarInsurance({state}){
+      return state.dataCarInsurance;
     }
   },
   actions: {

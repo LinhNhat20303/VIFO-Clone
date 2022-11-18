@@ -11,6 +11,7 @@
   "listSyncJS": [],
   "listAsyncJS": [],
   "pages": [
-    "/Home"
+    "/Home",
+    "/insurance-page/carInsurance"
   ]
 }

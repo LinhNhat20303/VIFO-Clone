@@ -87,8 +87,12 @@
 .swiper-button-next:after {
   font-size: 16px;
   position: absolute;
-  top: 252px;
-  color: #f5832f;
+  top: 242px;
+  color:white ;
+  margin-bottom: 10px;
+  padding: 10px 13px;
+    background: #f5832f;
+    border-radius: 50%;
 }
 .swiper-pagination {
     position: absolute;
@@ -261,4 +265,22 @@ line-height: 16px;
   background-color: transparent!important;
   margin-left: 119px;
   font-weight: 400;
+}
+.zmp-btn-primary{
+  background-color: #F5832F;
+  height: 32px;
+  width: 156px;
+}
+.zmp-btn-tertiary{
+  height: 32px;
+  width: 156px;
+  border: none;
+}
+.input1-2{
+  width: 176px !important;
+  height: 48px !important;
+
+}
+.swiper-button-disabled{
+  display: none;
 }
