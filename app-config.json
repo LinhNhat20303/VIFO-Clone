@@ -12,6 +12,7 @@
   "listAsyncJS": [],
   "pages": [
     "/Home",
-    "/insurance-page/carInsurance"
+    "/insurance-page/carInsurance",
+    "/testApi"
   ]
 }

@@ -8,18 +8,22 @@ import {
   Button,
   Icon,
   useStore,
+  zmp
 } from "zmp-framework/react";
 import { formatCurrency } from "../../helper";
+import { faLaptopFile } from "@fortawesome/free-solid-svg-icons";
 
 
 export default function carInsurance() {
   const dataCarInsurance = useStore("getDataCarInsurance");
+  
   return (
     <Page>
+      
       <Card className="bg-white py-0 ">
         <div className="inputCarInsurence px-[16px] py-[16px] ">
           <div className="headerInput flex items-center pb-[16px]">
-            <Icon zmp="zi-chevron-left-header" size={"22px"} />
+            <Icon className="text-black" zmp="zi-chevron-left-header" size={"22px"} />
             <span className="text-[18px] pl-[8px] font-medium">
               BH Bắt buộc TNDS xe ô tô
             </span>
@@ -158,7 +162,9 @@ export default function carInsurance() {
       </Card>
         )
       })}
-     
+    <Button onClick={()=>zmp.views.main.router.navigate("/testApi") } typeName="primary ">
+        Chi tiết đơn hàng
+    </Button>
     </Page>
   );
 }

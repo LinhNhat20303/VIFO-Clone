@@ -1,13 +1,11 @@
 import React from "react";
 import {
-  Page,
-  Card,
-  Navbar,
   Swiper,
   SwiperSlide,
   Button,
   zmp,
   Box,
+  Icon
 } from "zmp-framework/react";
 import view1 from "../static/Image/view1.png";
 import view2 from "../static/Image/view2.png";
@@ -16,10 +14,7 @@ import view3 from "../static/Image/view3.png";
 export default function SwiperHomePage() {
  
   return (
-    <div className="onboard">      
-      <button onClick={()=> zmp.views.main.router.navigate("/Home")}>
-hello
-      </button>
+    <div className="onboard">  
       <button></button>
       <Swiper  className="main" pagination navigation>
         <SwiperSlide>
@@ -59,7 +54,11 @@ hello
           </div>
           
          </div>
-        
+         <div  onClick={()=> zmp.views.main.router.navigate("/Home")} className="final-button">
+       
+          <Icon zmp='zi-check' size={"18px"}/>
+  
+         </div>
         </SwiperSlide> 
   
       </Swiper>

@@ -9,13 +9,7 @@ export default function Home() {
   
   const newsData = useStore("getHomePageNew");
  // const health = privacy.filter((icon) => [0,1,2,3].include(icon.id) == privacy[0].id);
- 
-  useEffect(()=>{
-    console.log(newsData);
-    
-    
-    
-  },[])
+
   return (
     <Page>
     <div className="bg-white pb-[55px] ">
