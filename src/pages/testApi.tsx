@@ -4,13 +4,13 @@ import * as services from "../api-services/services"
 import {Page, Card, List, ListInput,Box, Radio, Icon,Button}  from "zmp-framework/react";
 import { faSortNumericDown } from '@fortawesome/free-solid-svg-icons';
 
-const testApi = () => {
+export default function testApi(){
   let [data,setData] = useState({})
-  let [insuranceNumber,setInsuranceNumber] = useState(null)
+  let [insuranceNumber,setInsuranceNumber] = useState('')
+  var insuranceNumberToString =  insuranceNumber.toString()
+  
 
-  let currenceNumber = ''
   useEffect(()=>{
-
     // let response = services.verifyShCode("SsSYRJ0LZeBw")
     const getdata =  async () => {
       let response = await services.getBHXHInfo(insuranceNumber)
@@ -21,15 +21,31 @@ const testApi = () => {
     
     
     
- },[])
- console.log(data.Quoc_tich);
+  },[])
+console.log(insuranceNumberToString);
+ console.log(data);
  
+const getdata =  async (BHXHnumber) => {
+  let response = await services.getBHXHInfo(BHXHnumber)
+  setData(response.data[0]);
+  
+}
+
+ function handleOnChange (event) {
+  //console.log(event.target.value)
+  if(/^\d{10}$/.test(event.target.value)){
+   // console.log(123);
+    getdata(event.target.value)
  
+  }
+  
+}
+
   return (
     <Page>
       <Card className="bg-white py-0 ">
           <List
-            form
+            
             id='my-form'
             className='px-[16px] m-0'
             noHairlines
@@ -51,15 +67,19 @@ const testApi = () => {
          </div>
             <ListInput
               label='Số Bảo Hiểm Xã Hội'
-              type='number'
+              type='text'
               placeholder='Nhập số BHXH của bạn '
               clearButton
               info='Vui lòng nhập số BHXH để kiểm tra thẻ BHYT cũ'
               name='number'
-              //onChange={setInsuranceNumber(value)}
+              pattern='^[0-9]{10}'
+              maxlength={10}
+              onChange={e => handleOnChange(e)}
               required
               errorMessage='Invalid'
               validate
+
+            
             ></ListInput>
             <ListInput
               label='CCCD'
@@ -120,7 +140,7 @@ const testApi = () => {
             <div>
               <List
                 className="m-0 pr-[4px] w-[162px]"
-                form
+                
                 id="my-form"
                 noHairlines
               >
@@ -137,7 +157,7 @@ const testApi = () => {
             <div>
               <List
                 className="m-0 pl-[8px] w-[162px]"
-                form
+                
                 id="my-form"
                 noHairlines
               >
@@ -160,7 +180,7 @@ const testApi = () => {
             <div>
               <List
                 className="m-0 pr-[4px] w-[162px]"
-                form
+                
                 id="my-form"
                 noHairlines
               >
@@ -178,7 +198,7 @@ const testApi = () => {
             <div>
               <List
                 className="m-0 pl-[8px] w-[162px]"
-                form
+                
                 id="my-form"
                 noHairlines
               >
@@ -219,12 +239,12 @@ const testApi = () => {
           </div>
           </List>
         </Card>
-      <Card className='bg-white py-0'>
-      <Button onClick={()=> setInsuranceNumber()}> check</Button>
-      </Card>
+      {/* <Card className='bg-white py-0'>
+     <Button onClick={()=> setInsuranceNumber()}> check</Button>
+      </Card> */}
     </Page>
     
     )
 }
 
-export default testApi
+ 
