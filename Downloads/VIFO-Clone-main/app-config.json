@@ -1,0 +1,18 @@
+{
+  "app": {
+    "title": "Vifo Clone",
+    "headerColor": "#F5832F",
+    "textColor": "white",
+    "statusBarColor": "#F5832F",
+    "leftButton": "both"
+  },
+  "debug": false,
+  "listCSS": [],
+  "listSyncJS": [],
+  "listAsyncJS": [],
+  "pages": [
+    "/Home",
+    "/insurance-page/carInsurance",
+    "/testApi"
+  ]
+}
