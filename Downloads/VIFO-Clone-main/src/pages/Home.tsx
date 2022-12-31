@@ -1,14 +1,28 @@
-import React, { useEffect,  } from "react";
+import React, { useEffect, useState,  } from "react";
 import { Grid, GridItem,Icon, useStore, Page, Tabbar, Link,Button,zmp} from "zmp-framework/react";
 import slider from "../static/Image/Home/MaskGroup.png";
 import icon from "../static/Image/Home/item.png"
+import { showStringLength } from "../helper";
+import { loadFamilies } from "../api-services/services";
 
 
 export default function Home() {
   const privacy = useStore("getPrivacyContent");
-  
+  //const familyOrderData = useStore("getFamilyOrder")
+  const [familyOrder,setFamilyOrder] = useState([])
   const newsData = useStore("getHomePageNew");
+  const token = localStorage.getItem("token")
  // const health = privacy.filter((icon) => [0,1,2,3].include(icon.id) == privacy[0].id);
+ useEffect(()=>{
+  async function fetchApi(){
+    const familyOrder= await loadFamilies(token)
+    setFamilyOrder(familyOrder.data) 
+    localStorage.setItem("idFamilyOrder", familyOrder.id)
+  }
+  fetchApi()
+  
+},[]) 
+//console.log(familyOrder);
 
   return (
     <Page>
@@ -17,18 +31,18 @@ export default function Home() {
         <img className="w-full" src={slider} alt="" />
       </div>
       <div className="allItem pt-[16px] ">
-        <h1 className="itemTitle pl-[16px]  ">Bảo hiểm xe cộ</h1>
+        <h1 className="itemTitle pl-[16px]">Bảo hiểm xe cộ</h1>
         
-          <Grid noBorder>
-            {privacy.map((content,index)=>{
-              return(
-                 <GridItem key={`content${index}`} onClick={()=> zmp.views.main.router.navigate("/insurance-page/carInsurance")} >
-              <img className="Privacy" src={icon} alt="" />
-              <span className="textPrivacy">{content.label}</span>
-            </GridItem>
-              )
-            })}
+             <Grid className="flex" noBorder>
+          {familyOrder.map((item,index)=>{
+          return(
+                 <GridItem  key={`item-${index}`} onClick={()=> zmp.views.main.router.navigate({path:"/insurance-page/carInsurance",query:{id:item.id}})} >
+              <img className="Privacy" src={item.icon} alt="" /> 
+             <span className="textPrivacy">{showStringLength(item.translation.vi.description,30)}</span>
+            </GridItem> )
+        })}
           </Grid>
+         
    
       </div>
       
@@ -39,7 +53,7 @@ export default function Home() {
           <Grid noBorder>
             {privacy.map((content,index)=>{
               return(
-                 <GridItem key={`content${index}`} >
+                 <GridItem key={`content${index}`} onClick={()=> zmp.views.main.router.navigate("/bookingInformation")}>
               <img className="Privacy" src={icon} alt="" />
               <span className="textPrivacy">{content.label}</span>
             </GridItem>
@@ -49,7 +63,7 @@ export default function Home() {
    
       </div>  
       <div className="other pt-[16px] ">
-        <h1 className="itemTitle pl-[16px]  ">Các loại bảo hiểm khác</h1>
+        <h1 className="itemTitle pl-[16px]">Các loại bảo hiểm khác</h1>
         
           <Grid noBorder>
             {privacy.map((content,index)=>{
@@ -87,7 +101,7 @@ export default function Home() {
       </div>
        <div className="button absolute">
        <Button
-           className=" "
+           
             typeName='destructive'
            
           >

@@ -64,6 +64,7 @@ const store = createStore({
       
       
     ],
+    apiToken:{},
     homePageNew:[
       {
         id:1,
@@ -138,7 +139,56 @@ const store = createStore({
         subTitle:"Xe không kinh doanh",
         price:480700,
       }
-    ]
+    ],
+    customerData:[
+      {
+        "product_code": "TNDSBSMN01210101",
+        "fullname": "vu test",
+        "phone": "0971231231",
+        "email": "phamnguyenlinhdan95@gmail.com",
+        "address": "124 Kha Vạn Cân, khu phố 3, Hiệp Bình Chánh, Thủ Đức, Thành phố Hồ Chí Minh, Việt Nam",
+        "provider_order_number": "",
+        "no_plate": "55A12332",
+        "chassis_no": "123A12313",
+        "engine_no": "QW23123123",
+        "bike_type": 2,
+        "start_date": "2022-12-07",
+        "year": "1",
+        "end_date": "2023-12-07",
+        "final_amount": 66000,
+        "options": [],
+        "product_id": "nwmkv57qz03blag6",
+        "attachment_url_files": null,
+        "ward": "Hiệp Bình Chánh",
+        "district": "Thủ Đức",
+        "city": {
+            "name": "Hồ Chí Minh",
+            "slug": "ho-chi-minh",
+            "type": "thanh-pho",
+            "name_with_type": "Thành phố Hồ Chí Minh",
+            "code": "79",
+            "plate_code": [
+                41,
+                50,
+                51,
+                52,
+                53,
+                54,
+                55,
+                56,
+                57,
+                58,
+                59
+            ]
+        },
+        "country": "Việt Nam",
+        "full_address": "124 Kha Vạn Cân, khu phố 3, Hiệp Bình Chánh, Thủ Đức, Thành phố Hồ Chí Minh, Việt Nam",
+        "id": "nwmkv57qz03blag6",
+        "status": 0
+    }
+    ],
+    familyOrder:[],
+    familyOrderById:[],
   },
   getters: {
     user({ state }) {
@@ -158,6 +208,18 @@ const store = createStore({
     },
     getDataCarInsurance({state}){
       return state.dataCarInsurance;
+    },
+    getCustomerData({state}){
+      return state.customerData;
+    },
+    getApiToken({state}){
+      return state.apiToken
+    },
+    getFamilyOrder({state}){
+      return state.familyOrder
+    },
+    getFamilyOrderById({state}){
+      return state.familyOrderById
     }
   },
   actions: {
@@ -167,6 +229,15 @@ const store = createStore({
     addProduct({ state }, product) {
       state.products = [...state.products, product];
     },
+    setApiToken({state}, data){
+      return (state.apiToken = data)
+    },
+    setFamilyOrder({state},data){
+      return (state.familyOrder = data)
+    },
+    setFamilyOrderById({state},data){
+      return (state.familyOrderById= data)
+    }
   },
 })
 

@@ -10,16 +10,16 @@ export const callExtenalAPI = async (endpoint, method, body, headers) => {
         });
         return postpromise;
         break;
-     default:
-             const promise = await axios.get(endpoint, body, {
-                headers: headers,
-              });
-              return promise;
-              break;
-  }
-}
-let rsp = getRspData().then((response) => response.data)
-return rsp
+      default:
+        const promise = await axios.get(endpoint, body, {
+          headers: headers,
+        });
+        return promise;
+        break;
+    }
+  };
+  let rsp = getRspData().then((response) => response.data);
+  return rsp;
 
   // try {
   //   let promise = null;
@@ -40,7 +40,7 @@ return rsp
   //       promise = await axios.get(`${endpoint}`, { headers: headers });
   //       return promise;
   //   }
-  // } 
+  // }
   // try{
   //   var option = {
   //     method: method, // or 'PUT'
@@ -63,8 +63,37 @@ return rsp
   // }
   const baseURL = endpoint;
   // let headers = headers
-// api Link Protocol: url =  {baseUrl + apiVersion + endpoint},
+  // api Link Protocol: url =  {baseUrl + apiVersion + endpoint},
 
-//5420836627
+  //5420836627
+};
 
+// var listCustomer = []
+// listCustomer.push(data);
+// useEffect(()=>{console.log();
+// },[])
+export const callExtenalAPIFromToken = async (
+  endpoint,
+  method,
+  body,
+  headers
+) => {
+  const getRspData = async () => {
+    switch (method) {
+      case "POST":
+        const postpromise = await axios.post(endpoint, body, {
+          headers: headers,
+        });
+        return postpromise;
+        break;
+      default:
+        const promise = await axios.get(endpoint, body, {
+          headers: headers,
+        });
+        return promise;
+        break;
+    }
+  };
+  let rsp = getRspData().then((response) => response.data);
+  return rsp;
 };

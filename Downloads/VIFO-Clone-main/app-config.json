@@ -13,6 +13,11 @@
   "pages": [
     "/Home",
     "/insurance-page/carInsurance",
-    "/testApi"
+    "/testApi",
+    "/testForm",
+    "/CRUD/CRUDcustomer",
+    "/bookingInformation",
+    "/productForm",
+    "/carForm"
   ]
 }
