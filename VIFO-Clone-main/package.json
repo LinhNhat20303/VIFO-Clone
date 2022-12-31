@@ -1,0 +1,57 @@
+{
+  "name": "vifo-clone",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Vifo Clone",
+  "repository": "",
+  "license": "UNLICENSED",
+  "browserslist": [
+    "Android >= 5",
+    "IOS >= 9.3",
+    "Edge >= 15",
+    "Safari >= 9.1",
+    "Chrome >= 49",
+    "Firefox >= 31",
+    "Samsung >= 5"
+  ],
+  "scripts": {
+    "start": "zmp start",
+    "deploy": "zmp deploy",
+    "build:css": "postcss src/css/tailwind.css -o src/css/styles.css"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@fortawesome/fontawesome-svg-core": "^6.2.0",
+    "@fortawesome/free-solid-svg-icons": "^6.2.0",
+    "@mui/icons-material": "^5.10.16",
+    "@mui/material": "^5.10.16",
+    "@mui/styled-engine-sc": "^5.10.16",
+    "@types/react": "^18.0.25",
+    "@types/react-dom": "^18.0.8",
+    "antd": "^5.0.7",
+    "axios": "^1.1.3",
+    "crypto-js": "^4.1.1",
+    "dateformat": "^5.0.3",
+    "moment": "^2.29.4",
+    "nvm": "^0.0.4",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "styled-components": "^5.3.6",
+    "swiper": "^8.4.4",
+    "zmp-framework": "^1.7.2",
+    "zmp-sdk": "^2.23.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react-refresh": "^1.3.6",
+    "autoprefixer": "^10.4.13",
+    "cross-env": "^7.0.3",
+    "postcss": "^8.4.18",
+    "postcss-cli": "^8.3.1",
+    "postcss-preset-env": "^6.7.0",
+    "sass": "^1.56.1",
+    "tailwindcss": "^3.2.3",
+    "vite": "^2.6.14"
+  }
+}
