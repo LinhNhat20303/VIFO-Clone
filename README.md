@@ -2,30 +2,6 @@
 
 ## ZMP CLI Options
 
-ZMP app created with following options:
 
-```
-{
-  "cwd": "C:\\VIFO\\New folder\\vifo-clone",
-  "name": "Vifo Clone",
-  "framework": "react-typescript",
-  "cssPreProcessor": "scss",
-  "includeTailwind": true,
-  "stateManagement": "store",
-  "newProject": true,
-  "template": "blank",
-  "theming": {
-    "customColor": false,
-    "color": "#007aff",
-    "darkTheme": false,
-    "iconFonts": true,
-    "fillBars": false,
-    "useUiKits": true
-  }
-}
-```
+https://github.com/LinhNhat20303/VIFO-Clone/assets/95093561/eaef7078-811b-4468-a3d9-538403cf6977
 
-## NPM Scripts
-
-* 🔥 `start` - run development server
-* 🙏 `deploy` - deploy mini app for production
